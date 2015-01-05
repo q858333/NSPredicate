@@ -16,6 +16,7 @@
 		F79ABDFD1A4BAB260058FFDE /* NSPredicateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F79ABDFC1A4BAB260058FFDE /* NSPredicateTests.m */; };
 		F79ABE071A4BB3870058FFDE /* 123.txt in Resources */ = {isa = PBXBuildFile; fileRef = F79ABE061A4BB3870058FFDE /* 123.txt */; };
 		F79ABE0A1A4BB7590058FFDE /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = F79ABE091A4BB7590058FFDE /* Car.m */; };
+		F7E8461A1A5A79FD00002BFC /* DBPreDicateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E846191A5A79FD00002BFC /* DBPreDicateTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		F79ABE061A4BB3870058FFDE /* 123.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 123.txt; sourceTree = "<group>"; };
 		F79ABE081A4BB7590058FFDE /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		F79ABE091A4BB7590058FFDE /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		F7E846181A5A79FD00002BFC /* DBPreDicateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPreDicateTool.h; sourceTree = "<group>"; };
+		F7E846191A5A79FD00002BFC /* DBPreDicateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPreDicateTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				F79ABDE81A4BAB250058FFDE /* ViewController.m */,
 				F79ABE081A4BB7590058FFDE /* Car.h */,
 				F79ABE091A4BB7590058FFDE /* Car.m */,
+				F7E846181A5A79FD00002BFC /* DBPreDicateTool.h */,
+				F7E846191A5A79FD00002BFC /* DBPreDicateTool.m */,
 				F79ABDEA1A4BAB250058FFDE /* Main.storyboard */,
 				F79ABDED1A4BAB250058FFDE /* Images.xcassets */,
 				F79ABDEF1A4BAB250058FFDE /* LaunchScreen.xib */,
@@ -230,6 +235,7 @@
 			files = (
 				F79ABDE91A4BAB250058FFDE /* ViewController.m in Sources */,
 				F79ABDE61A4BAB250058FFDE /* AppDelegate.m in Sources */,
+				F7E8461A1A5A79FD00002BFC /* DBPreDicateTool.m in Sources */,
 				F79ABE0A1A4BB7590058FFDE /* Car.m in Sources */,
 				F79ABDE31A4BAB250058FFDE /* main.m in Sources */,
 			);
@@ -422,6 +428,7 @@
 				F79ABE021A4BAB260058FFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F79ABE031A4BAB260058FFDE /* Build configuration list for PBXNativeTarget "NSPredicateTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				F79ABE051A4BAB260058FFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
