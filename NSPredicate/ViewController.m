@@ -96,9 +96,43 @@
     NSLog(@"%@",arrayContent);
     
     
- 
+    [self parseString];
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)parseString
+{
+    
+    NSString *string=@"萨芬大师的sad啊啥的啊啥的#sad#sadas@sadas多撒点 撒点";
+    
+    NSError *error;
+    //  //http+:[^\\s]*
+    
+    NSArray *regexs =@[[NSRegularExpression regularExpressionWithPattern:@"@[\\u4e00-\\u9fa5\\w\\-]+" options:0 error:nil],[NSRegularExpression regularExpressionWithPattern:@"#([\\u4e00-\\u9fa5\\w\\-]+)#" options:0 error:nil]];
+
+    
+    for ( NSRegularExpression *regex in regexs)
+    {
+        if (regex != nil)
+        {
+            NSArray *checkingResults=[regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+            
+            for (NSTextCheckingResult *match in checkingResults)
+            {
+                
+                  NSLog(@"%@",[string substringWithRange:match.range]);
+                
+            }
+            
+        }
+        
+    }
+    
+
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
