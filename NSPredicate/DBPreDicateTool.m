@@ -1,7 +1,7 @@
 //
 //  DBPreDicateTool.m
 //  NSPredicate
-//
+// http://blog.csdn.net/chaoyuan899/article/details/38583759
 //  Created by dengbin on 15/1/5.
 //  Copyright (c) 2015年 IUAIJIA. All rights reserved.
 //
@@ -16,16 +16,22 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
 }
+//匹配身份证：\d{15}|\d{18}
+//评注：中国的身份证为15位或18位
+
+
 
 +(BOOL)isName:(NSString *)name
-{//[a-zA-Z0-9\u4e00-\u9fa5]
+{//[a-zA-Z0-9\u4e00-\u9fa5]    匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$
+
     NSString *regex = @"[a-zA-Z0-9\u4e00-\u9fa5]+"; //数字字母汉字
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pred evaluateWithObject: name];
 }
 //包括小数点
 +(BOOL)isNumber:(NSString *)number
-{
+{//^[1-9]\d*|0$　 //匹配非负整数（正整数 + 0）
+
     NSString *numberRegex = @"(^-?\\d\\d*\\.\\d*$)|(^-?\\d\\d*$)|(^-?\\.\\d\\d*$)";
     NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
     return [numberTest evaluateWithObject:number];
