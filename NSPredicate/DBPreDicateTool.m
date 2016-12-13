@@ -23,7 +23,7 @@
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pred evaluateWithObject: name];
 }
-
+//包括小数点
 +(BOOL)isNumber:(NSString *)number
 {
     NSString *numberRegex = @"(^-?\\d\\d*\\.\\d*$)|(^-?\\d\\d*$)|(^-?\\.\\d\\d*$)";
@@ -39,7 +39,20 @@
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     return [phoneTest evaluateWithObject:mobile];
 }
-
-
-
+//判断电话最新
++ (BOOL)isValidateMobile:(NSString *)mobile
+{
+  NSString *CM = @"(^1(3[4-9]|4[7]|5[0-27-9]|7[8]|8[2-478])\\d{8}$)|(^1705\\d{7}$)";
+  NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
+  return [regextestcm evaluateWithObject:mobile];
+}
+//判断qq
++ (BOOL)isValidateQQ:(NSString *)qq
+{
+  NSString *regex =@"[1-9][0-9]{4,}";
+  NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+  
+  return [pred evaluateWithObject:qq];
+  
+}
 @end
