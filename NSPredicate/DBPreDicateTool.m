@@ -36,7 +36,16 @@
     NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
     return [numberTest evaluateWithObject:number];
 }
-
+//名字包括少数民族  类似：时代·撒旦 
++ (BOOL)isValidateName:(NSString *)name
+{
+  
+  NSString *regex =@"[\u4E00-\u9FA5]{2,8}(?:·[\u4E00-\u9FA5]{2,8})*";
+  NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+  
+  return [pred evaluateWithObject:name];
+  
+}
 +(BOOL)isMobile:(NSString *)mobile
 {
 
