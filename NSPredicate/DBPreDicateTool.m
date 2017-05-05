@@ -10,6 +10,80 @@
 
 @implementation DBPreDicateTool
 
+// /**
+//      * 判断身份证中出生日期是否正确。
+//      *
+//      * @return
+//      */
+//     private boolean isDateCorrect() {
+
+//         /*非闰年天数*/
+//         int[] monthDayN = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+//         /*闰年天数*/
+//         int[] monthDayL = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+//         int month;
+
+//         int day;
+//         try {//是否15位
+//             if (this.is15()) {
+//                 month = Integer.parseInt(this.idCardNum.substring(8, 10));
+//             }
+//             else {／／字符串转int
+//                 month = Integer.parseInt(this.idCardNum.substring(10, 12));
+//             }
+
+//             if (this.is15()) {
+//                 day = Integer.parseInt(this.idCardNum.substring(10, 12));
+//             }
+//             else {
+//                 day = Integer.parseInt(this.idCardNum.substring(12, 14));
+//             }
+//             if (month > 12 || month <= 0) {
+//                 return false;
+//             }
+
+//             if (this.isLeapyear()) {
+//                 if (day > monthDayL[month - 1] || day <= 0)
+//                     return false;
+//             }
+//             else {
+//                 if (day > monthDayN[month - 1] || day <= 0)
+//                     return false;
+//             }
+//         } catch (NumberFormatException e) {
+//             return false;
+//         }
+//         return true;
+//     }
+// 肾得朕心  11:52:55
+// isLeapyear
+// 吴景  11:53:35
+//  /**
+//      * 判断身份证的出生年份是否未闰年。
+//      *
+//      * @return true ：闰年  false 平年
+//      */
+//     private boolean isLeapyear() {
+//         String temp;
+
+//         if (this.is15()) {／／取子字符串
+//             temp = "19" + this.idCardNum.substring(6, 8);
+//         }
+//         else {
+//             temp = this.idCardNum.substring(6, 10);
+//         }
+
+//         int year = Integer.parseInt(temp);
+
+//         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+//             return true;
+//         else
+//             return false;
+//     }
+    
+    
+    
 +(BOOL)isEmail:(NSString *)email
 {
     //   // NSString *emailRegex = @"^([a-zA-Z0-9]*[-_]?[a-zA-Z0-9]+)*@([a-zA-Z0-9]*[-_]?[a-zA-Z0-9]+)+[\\.][A-Za-z]{2,3}([\\.][A-Za-z]{2})?$";
