@@ -146,4 +146,14 @@
   return [pred evaluateWithObject:qq];
   
 }
+
+//密码（数字字母特殊符号 任意两种组合）
++ (BOOL)isValidatePassword:(NSString *)password
+{
+    NSString *passWordRegex = @"^(?=.*[a-zA-Z0-9].*)(?=.*[a-zA-Z\\W].*)(?=.*[0-9\\W].*).{6,20}$";
+
+
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passWordRegex];
+    return [regextestcm evaluateWithObject:password];
+}
 @end
