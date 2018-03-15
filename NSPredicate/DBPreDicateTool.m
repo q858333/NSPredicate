@@ -104,6 +104,17 @@
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pred evaluateWithObject: name];
 }
+//过滤特殊字符  数字字母汉字常用符号
++(BOOL)isRemark:(NSString*)sText
+{
+
+    NSString*remarkRegex =@"[0-9a-zA-Z\u4e00-\u9fa5\\.\\*\\)\\(\\+\\$\\[\\?\\\\\\^\\{\\|\\]\\}%%%@\'\",。‘、-【】·！_——=:;；<>《》‘’“”!#~]+";
+
+    NSPredicate*passWordPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",remarkRegex];
+
+    return[passWordPredicate evaluateWithObject:sText];
+
+}
 //包括小数点
 +(BOOL)isNumber:(NSString *)number
 {//^[1-9]\d*|0$　 //匹配非负整数（正整数 + 0）
