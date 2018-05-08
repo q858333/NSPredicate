@@ -56,9 +56,6 @@
 //         }
 //         return true;
 //     }
-// 肾得朕心  11:52:55
-// isLeapyear
-// 吴景  11:53:35
 //  /**
 //      * 判断身份证的出生年份是否未闰年。
 //      *
@@ -118,6 +115,7 @@
 //包括小数点
 +(BOOL)isNumber:(NSString *)number
 {//^[1-9]\d*|0$　 //匹配非负整数（正整数 + 0）
+ //^\\+?[1-9][0-9]*$ 正整数不包括0
 
     NSString *numberRegex = @"(^-?\\d\\d*\\.\\d*$)|(^-?\\d\\d*$)|(^-?\\.\\d\\d*$)";
     NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegex];
